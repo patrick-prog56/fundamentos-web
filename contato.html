@@ -9,12 +9,19 @@
 </head>
 
 
-<ul  id="menu">
+<ul id="menu">
     <li>
-        <a href="index.html"> Página Inicial</a>
+        <a href="index.html"> Página Inicial</a> 
     </li>
     <li>
         <a href="contato.html"> Contato</a>
+    </li>
+    <li>
+        <a href="cachorro.html"> Pet do Patrick</a>
+    </li>
+
+    <li>
+       <a href="estudos.html"> Instituições onde estudou</a>
     </li>
 </ul>
 
@@ -28,18 +35,22 @@
 <div>
 <form class="center">
     <label for="Nome">Nome:</label> <br>
-    <input type="text" id="nome">
+    <input type="text" id="nome" onkeyup='validaNome()'>
+    <div id='txtNome'></div>
     <br>
-    <br>
+
     <label for="email">E-mail:</label><br>
-    <input type="email" id="email">
+    <input type="email" id="email" onkeyup='validaEmail()'>
+    <div id='txtEmail'></div> 
     <br>
-    <br>
+
     <label for="assunto">Assunto:</label><br>
-    <textarea name="assunto" id="assunto" cols="80" rows="10"></textarea>
+    <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+    <div id='txtAssunto'></div> 
     <br>
     <br>
-    <button>Enviar</button>
+
+    <button onclick="enviar()">Enviar</button>
 </form>
 </div>
 
@@ -57,7 +68,9 @@
 0!2sR.%20Oscar%20Freire%2C%201500%20-%20Jardim%20America%2C%20S%C3%A3o%2
 0Paulo%20-%20SP%2C%2005409-010!5e0!3m2!1spt-BR!2sbr!4v1623860366268!5m2!
 1spt-BR!2sbr"
- width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+ width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" onmousemove= 'mapaZoom()' 
+ onmouseout= 'mapaNormal()'  
+ id="mapa"></iframe>
 </iframe>
 
 </div>
@@ -88,6 +101,8 @@
     Todos os direitos reservados para Patrick Santana &copy;
 </p>
 </footer>
+
+<script src="assets/js/script.js"></script>
 
 </body>
 </html>
